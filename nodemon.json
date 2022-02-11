@@ -1,0 +1,12 @@
+{
+    "watch": [
+        "typescript"
+    ],
+    "ext": "ts,json",
+    "stdin": false,
+    "ignore": [
+        "src/**/*.spec.ts",
+        "node_modules"
+    ],
+    "exec": "npx ts-node ./typescript/start.ts"
+}

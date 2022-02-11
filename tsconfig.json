@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "",
+    "strict": true,
+    "module": "CommonJS",
+    "target": "ES2021",
+    "esModuleInterop": true
+  }
+}
