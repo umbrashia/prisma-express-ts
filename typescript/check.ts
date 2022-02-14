@@ -4,14 +4,24 @@ interface ISimpleObj {
     myCallPick: () => void;
 }
 
+function first() {
+    console.log("first(): factory evaluated");
+    return function (target?: any, propertyKey?: string, descriptor?: PropertyDescriptor) {
+        console.log("first(): called");
+    };
+}
 
-    var simpleObj: ISimpleObj = {
-        firstName: "", LastName: "",
-        myCallPick: () =>{ 
-            console.log()
 
-        }
+class Myclass {
+
+
+    @first()
+    public call() {
+
+console.log("hello");
+
     }
+}
 
 
 

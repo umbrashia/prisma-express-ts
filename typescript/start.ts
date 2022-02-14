@@ -1,8 +1,9 @@
 import Inquirer from "inquirer";
+import colors from "colors";
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 // var jj=inquirer
-console.log(("-------Welcome to user management tool-------"));
+console.log(colors.cyan("--------Welcome to user management tool--------".trimEnd()));
 
 (async () => {
     while (true) {

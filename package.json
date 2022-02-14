@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@prisma/client": "^3.9.1",
+    "colors": "^1.4.0",
     "inquirer": "^8.2.0"
   }
 }

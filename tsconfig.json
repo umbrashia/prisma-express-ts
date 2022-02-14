@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
     "sourceMap": true,
-    "outDir": "",
+    "outDir": "dist",
     "strict": true,
-    "module": "CommonJS",
-    "target": "ES2021",
+    "lib": ["esnext"],
     "esModuleInterop": true
   }
 }
