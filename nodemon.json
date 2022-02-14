@@ -8,5 +8,6 @@
         "src/**/*.spec.ts",
         "node_modules"
     ],
+    "restartable": false,
     "exec": "npx ts-node ./typescript/start.ts"
 }
