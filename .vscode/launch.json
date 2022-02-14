@@ -9,7 +9,7 @@
             "internalConsoleOptions": "neverOpen",
             "name": "nodemon",
             "request": "launch",
-            "restart": true,
+            "restart": false,
             "program": "${workspaceRoot}/node_modules/nodemon/bin/nodemon.js",
             "runtimeExecutable": "nodemon",
             "skipFiles": [
