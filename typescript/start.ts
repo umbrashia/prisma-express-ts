@@ -1,13 +1,15 @@
 import Inquirer from "inquirer";
 import colors from "colors";
 import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import inquirer from "inquirer";
+const prisma = new PrismaClient();
 // var jj=inquirer
-console.log(colors.cyan("--------Welcome to user management tool--------".trimEnd()));
+
 
 (async () => {
     while (true) {
-        const answers = await Inquirer
+        console.log(colors.cyan("\n--------Welcome to user management tool--------\n"));
+        let answers = await Inquirer
             .prompt([
                 {
                     name: "userChoice",
@@ -36,9 +38,12 @@ console.log(colors.cyan("--------Welcome to user management tool--------".trimEn
             console.log(("saved.."), response);
         } else {
             const data = await prisma.user.findFirst({ where: { email: answers.email } });
-            (data) ? console.log(("user found : "), data) : console.log(("no user found..."));
+            (data) ? console.log(colors.bgGreen("user found : "), data) : console.log(colors.bgRed("no user found..."));
 
         }
+        answers = await inquirer.prompt([{ name: "reInput", type: "confirm", message: "Do you want exit" }]);
+        if (answers.reInput)
+            break;
     }
 })();
 
